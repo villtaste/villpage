@@ -1,13 +1,143 @@
-body{
-    color: gray;
-    font-size:30px
+.cp_accordionslide08 {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+background-color: #2497f0;
 }
-#first{
-    color:orange
+.cp_accordionslide08:hover .slideitem {
+width: 20%;
 }
-.second{
-    color:red
+.cp_accordionslide08 .slideitem {
+position: relative;
+overflow: hidden;
+width: 20%;
+height: 100vh;
+-webkit-transition: width 0.5s ease;
+transition: width 0.5s ease;
+-webkit-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+color: #ffffff;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
 }
-div{
-    color:#6600cc
+.cp_accordionslide08 .slideitem:nth-child(1) {
+background-image: url('moka.jpg');
+}
+.cp_accordionslide08 .slideitem:nth-child(2) {
+background-image: url('programing.jpg');
+}
+.cp_accordionslide08 .slideitem:nth-child(3) {
+background-image: url('boku.jpg');
+}
+.cp_accordionslide08 .slideitem:nth-child(4) {
+background-image: url('tsukubadaigaku.jpg');
+}
+.cp_accordionslide08 .slideitem:nth-child(5) {
+background-image: url('FAG.jpeg');
+}
+.cp_accordionslide08 .slideitem:before,
+.cp_accordionslide08 .slideitem:after {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+content: '';
+-webkit-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+}
+.cp_accordionslide08 .slideitem:after {
+-webkit-transition: opacity 0.5s ease;
+transition: opacity 0.5s ease;
+opacity: 1;
+background: rgba(3, 22, 37, 0.85);
+}
+.cp_accordionslide08 .slideitem:before {
+z-index: 1;
+-webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+transition: opacity 0.5s ease, transform 0.5s ease;
+transition: opacity 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
+-webkit-transform: translate3d(0, 0, 0) translateY(50%);
+transform: translate3d(0, 0, 0) translateY(50%);
+opacity: 0;
+background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(75%, #000000));
+background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #000000 75%);
+background:         linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 75%);
+}
+.cp_accordionslide08 .slideitem:hover {
+width: 60% !important;
+}
+.cp_accordionslide08 .slideitem:hover:after {
+opacity: 0;
+}
+.cp_accordionslide08 .slideitem:hover:before {
+-webkit-transition: opacity 1s ease, -webkit-transform 1s ease 0.25s;
+transition: opacity 1s ease, -webkit-transform 1s ease 0.25s;
+transition: opacity 1s ease, transform 1s ease 0.25s;
+transition: opacity 1s ease, transform 1s ease 0.25s, -webkit-transform 1s ease 0.25s;
+-webkit-transform: translate3d(0, 0, 0) translateY(0);
+transform: translate3d(0, 0, 0) translateY(0);
+opacity: 1;
+}
+.cp_accordionslide08 .slideitem:hover .slidecont {
+-webkit-transition: all 0.75s ease 0.5s;
+transition: all 0.75s ease 0.5s;
+-webkit-transform: translateY(0);
+transform: translateY(0);
+opacity: 1;
+}
+.cp_accordionslide08 .slideitem h2 {
+font-size: 1.4em;
+position: absolute;
+z-index: 1;
+top: 50%;
+left: 50%;
+-webkit-transition: all 0.75s ease;
+transition: all 0.75s ease;
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
+white-space: nowrap;
+}
+.cp_accordionslide08 .slideitem h2::before {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+content: '';
+}
+.cp_accordionslide08 .slideitem:hover h2 {
+top: 2%;
+}
+.cp_accordionslide08 .slidecont {
+position: relative;
+z-index: 1;
+top: 10%;
+margin: 0 1.618em;
+-webkit-transform: translate3d(0, 0, 0) translateY(25px);
+transform: translate3d(0, 0, 0) translateY(25px);
+text-align: center;
+opacity: 0;
+}
+@media only screen and (max-width:768px) {
+.cp_accordionslide08 {
+display: block;
+}
+.cp_accordionslide08:hover .slideitem {
+width: 100%;
+height: 20vh;
+}
+.cp_accordionslide08 .slideitem {
+width: 100%;
+height: 20vh;
+}
+.cp_accordionslide08 .slideitem:hover {
+width: 100% !important;
+height: 100vh !important;
+}
+.cp_accordionslide08 .slideitem h2 {
+top: 35%;
+}
 }
